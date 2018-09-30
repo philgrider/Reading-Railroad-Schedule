@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading Railroad Schedule</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css">    
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- Font -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body> 
+    <head >
+    <nav class="navbar navbar-light bg-secondary">
+        <span class="navbar-brand text-light text-center mb-0 h1">Reading Railroad Schedule</span>
+    </nav>
+    </head>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid" id="background-color">
+            <h1 class="display-4 text-center text-light">Find your train below</h1>
+            <p class="h3 text-center text-light">A Comprehensive Directory of trains and arrival times</p>
+        </div>
+        <table class="table border">
+            <thead class="thead-secondary bg-secondary text-light mt-2">
+                <tr>
+                    <th scope="col">Tran Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="train-tracking-area">
+                <tr>
+                    <th scope="row">2pm to Boardwalk</th>
+                    <td>New Jersey</td>
+                    <td>20</td>
+                    <td>2pm</td>
+                    <td>90</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card">
+                <h5 class="card-header bg-secondary text-light">Add Train</h5>
+                <div class="card-body">
+        <form>
+                <div class="form-group">
+                  <label for="new-train-name">Train Name</label>
+                  <input class="form-control" id="new-train-name"  placeholder="Im a train">
+                  <label for="new-desitnation">Desitnation</label>
+                  <input class="form-control" id="new-desitnation" placeholder="Newark">
+                  <label for="new-start-time">First Train time (HH:mm - military time)</label>
+                  <input class="form-control" id="new-start-time" placeholder="10:00">
+                  <label for="new-frequency">Frequency (min)</label>
+                  <input class="form-control" id="new-frequency" placeholder="10">
+                </div>
+
+                <button id="add-train" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+              </div>
+              </div>
+    </div>
+      <!-- LINK TO FIREBASE GOES HERE -->
+      <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+        <!-- bootstrap Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- My Javascript -->
+    <script src="./assets/javascript/code.js"></script>
+</body>
+</html>
