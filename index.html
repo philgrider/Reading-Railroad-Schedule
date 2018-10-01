@@ -11,14 +11,17 @@
         <link rel="stylesheet" href="./assets/css/reset.css">    
         <link rel="stylesheet" href="./assets/css/style.css">
         <!-- Font -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <!-- Added Moment JS -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/regular.css" integrity="sha384-ZlNfXjxAqKFWCwMwQFGhmMh3i89dWDnaFU2/VZg9CvsMGA7hXHQsPIqS+JIAmgEq" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+        <!-- Added Moment JS -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body> 
     <head >
     <nav class="navbar navbar-light bg-secondary">
-        <span class="navbar-brand text-light text-center mb-0 h1">Reading Railroad Schedule</span>
+        <span class="navbar-brand text-light m-auto h1">Reading Railroad Schedule</span>
     </nav>
     </head>
     <div class="container">
@@ -27,13 +30,14 @@
             <p class="h3 text-center text-light">A Comprehensive Directory of trains and arrival times</p>
         </div>
         <table class="table border">
-            <thead class="thead-secondary bg-secondary text-light mt-2">
+            <thead class="thead-secondary bg-secondary text-light text-center mt-2">
                 <tr>
                     <th scope="col">Tran Name</th>
                     <th scope="col">Destination</th>
-                    <th scope="col">Frequency (min)</th>
-                    <th scope="col">Next Arrival</th>
-                    <th scope="col">Minutes Away</th>
+                    <th class="text-center" scope="col">Frequency (min)</th>
+                    <th class="text-center" scope="col">Next Arrival</th>
+                    <th class="text-center" scope="col">Minutes Away</th>
+                    <th class="text-center" scope="col">Remove</th>
                 </tr>
             </thead>
             <tbody id="train-tracking-area">
@@ -52,11 +56,11 @@
         <form>
                 <div class="form-group">
                   <label for="new-train-name">Train Name</label>
-                  <input class="form-control" id="new-train-name"  placeholder="Im a train">
+                  <input class="form-control" id="new-train-name"  placeholder="Train Name">
                   <label for="new-desitnation">Desitnation</label>
-                  <input class="form-control" id="new-desitnation" placeholder="Newark">
+                  <input class="form-control" id="new-desitnation" placeholder="Somewhere">
                   <label for="new-start-time">First Train time (HH:mm - military time)</label>
-                  <input class="form-control" id="new-start-time" placeholder="10:00">
+                  <input class="form-control" id="new-start-time" placeholder="0630">
                   <label for="new-frequency">Frequency (min)</label>
                   <input class="form-control" id="new-frequency" placeholder="10">
                 </div>
@@ -65,6 +69,7 @@
               </form>
               </div>
               </div>
+            
     </div>
       <!-- LINK TO FIREBASE GOES HERE -->
       <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
@@ -74,5 +79,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- My Javascript -->
     <script src="./assets/javascript/code.js"></script>
+    <script src="./assets/javascript/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 </body>
 </html>
